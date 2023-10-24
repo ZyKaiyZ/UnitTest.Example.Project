@@ -17,7 +17,7 @@ namespace Tests
         }
 
         [Fact]
-        public void GetExampleModelTest()
+        public void GetExampleModel_ReturnExampleModel()
         {
             // Arrange
             ILoggerService loggerService = CreateDefaultLoggerService();

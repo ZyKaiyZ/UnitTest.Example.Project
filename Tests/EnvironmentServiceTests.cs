@@ -12,7 +12,7 @@ namespace Tests
         }
 
         [Fact]
-        public void GetExampleModel()
+        public void GetExampleModel_ReturnExampleModel()
         {
             // Arrange
             IEnvironmentService environmentService = CreateDefaultEnvironmentService();

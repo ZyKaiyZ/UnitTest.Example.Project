@@ -18,7 +18,7 @@ namespace Tests
         }
 
         [Fact]
-        public async void GetExampleModelTest()
+        public async void GetExampleModel_ReturnExampleModel()
         {
             // Arrange
             IHttpService httpService = CreateDefaultHttpService();
