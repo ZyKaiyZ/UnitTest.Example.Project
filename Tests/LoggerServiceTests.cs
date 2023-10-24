@@ -19,16 +19,19 @@ namespace Tests
         [Fact]
         public void GetExampleModelTest()
         {
+            // Arrange
             ILoggerService loggerService = CreateDefaultLoggerService();
 
-            ExampleModel exampleModel = loggerService.GetExampleModel();
+            // Act
+            ExampleModel result = loggerService.GetExampleModel();
 
-            Assert.NotNull(exampleModel);
-            Assert.NotNull(exampleModel.Name);
-            Assert.NotNull(exampleModel.Description);
-            Assert.Equal("Example", exampleModel.Name);
-            Assert.Equal("I am an example", exampleModel.Description);
-            _mcokLogger.VerifyLog(logger => logger.LogInformation("Name: {0}, Description: {1}", exampleModel.Name, exampleModel.Description), Times.Once);
+            // Assert
+            Assert.NotNull(result);
+            Assert.NotNull(result.Name);
+            Assert.NotNull(result.Description);
+            Assert.Equal("Example", result.Name);
+            Assert.Equal("I am an example", result.Description);
+            _mcokLogger.VerifyLog(logger => logger.LogInformation("Name: {0}, Description: {1}", result.Name, result.Description), Times.Once);
         }
     }
 }

@@ -12,17 +12,20 @@ namespace Tests
         }
 
         [Fact]
-        public void GetExampleModelTest()
+        public void GetExampleModel()
         {
+            // Arrange
             IEnvironmentService environmentService = CreateDefaultEnvironmentService();
 
-            ExampleModel exampleModel = environmentService.GetExampleModel();
+            // Act
+            ExampleModel result = environmentService.GetExampleModel();
 
-            Assert.NotNull(exampleModel);
-            Assert.NotNull(exampleModel.Name);
-            Assert.NotNull(exampleModel.Description);
-            Assert.Equal("Example", exampleModel.Name);
-            Assert.Equal("I am an example", exampleModel.Description);
+            // Assert
+            Assert.NotNull(result);
+            Assert.NotNull(result.Name);
+            Assert.NotNull(result.Description);
+            Assert.Equal("Example", result.Name);
+            Assert.Equal("I am an example", result.Description);
         }
     }
 }
