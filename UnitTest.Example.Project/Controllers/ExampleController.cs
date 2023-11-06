@@ -11,12 +11,14 @@ namespace UnitTest.Example.Controllers
         private readonly IEnvironmentService _environmentService;
         private readonly ILoggerService _loggerService;
         private readonly IHttpService _httpService;
+        private readonly IFakeService _fakeService;
 
-        public ExampleController(IEnvironmentService environmentService, ILoggerService loggerService, IHttpService httpService)
+        public ExampleController(IEnvironmentService environmentService, ILoggerService loggerService, IHttpService httpService, IFakeService fakeService)
         {
             _environmentService = environmentService;
             _loggerService = loggerService;
             _httpService = httpService;
+            _fakeService = fakeService;
         }
 
         [HttpGet("GetExampleModel")]

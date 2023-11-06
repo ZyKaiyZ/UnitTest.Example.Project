@@ -14,6 +14,7 @@ builder.Services.AddHttpClient();
 builder.Services.AddScoped<IEnvironmentService, EnvironmentService>();
 builder.Services.AddScoped<ILoggerService, LoggerService>();
 builder.Services.AddScoped<IHttpService, HttpService>();
+builder.Services.AddScoped<IFakeService, FakeService>();
 
 var app = builder.Build();
 
