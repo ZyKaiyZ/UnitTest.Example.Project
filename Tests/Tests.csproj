@@ -4,11 +4,12 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-
+	<RunSettingsFilePath>$(MSBuildProjectDirectory)\example.runsettings</RunSettingsFilePath>
     <IsPackable>false</IsPackable>
     <IsTestProject>true</IsTestProject>
   </PropertyGroup>
 
+	
   <ItemGroup>
     <Compile Remove="FakesAssemblies\**" />
     <EmbeddedResource Remove="FakesAssemblies\**" />
@@ -36,5 +37,9 @@
   <ItemGroup>
     <AdditionalDesignTimeBuildInput Remove="FakesAssemblies\**" />
   </ItemGroup>
-
+	
+  <ItemGroup>
+	<Reference Include="FakesAssemblies\System.Runtime.6.0.0.0.Fakes.dll"/>
+	<Reference Include="FakesAssemblies\UnitTest.Example.Project.Fakes.dll"/>
+  </ItemGroup>
 </Project>
