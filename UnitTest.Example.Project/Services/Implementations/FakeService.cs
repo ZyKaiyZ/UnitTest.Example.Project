@@ -6,8 +6,6 @@ namespace UnitTest.Example.Services.Implementations
 {
     public class FakeService : IFakeService
     {
-        public FakeService() { }
-
         public ExampleModel GetExampleModel()
         {
             ExampleModel exampleModel = new ExampleModel()

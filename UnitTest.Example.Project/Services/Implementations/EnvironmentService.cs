@@ -5,8 +5,6 @@ namespace UnitTest.Example.Services.Implementations
 {
     public class EnvironmentService : IEnvironmentService
     {
-        public EnvironmentService() { }
-
         public ExampleModel GetExampleModel()
         {
             ExampleModel exampleModel = new ExampleModel()
